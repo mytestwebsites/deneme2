@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu {
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  height: 120px;
+  padding: 2rem 0 0;
+}
+
+.menu .item {
+  position: relative;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+
+.menu .item span {
+  position: absolute;
+  top: 0.9em;
+  height: 5px;
+  width: 75%;
+  background-color: gray;
+  margin: 0.5em auto;
+  left: .4em;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.menu .item span::before, .menu .item span::after {
+  position: absolute;
+  content: "";
+  background-color: gray;
+  height: 5px;
+}
+
+.menu .item span::before {
+  width: 100%;
+  top: -10px;
+  left: 0;
+}
+
+.menu .item span::after {
+  width: 100%;
+  top: 10px;
+  left: 0;
+}
+
+.menu .item span.open {
+  position: absolute;
+  height: 5px;
+  width: 75%;
+  background-color: white;
+  margin: 0.5em auto;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.menu .item span.open::before, .menu .item span.open::after {
+  position: absolute;
+  content: "";
+  background-color: gray;
+  height: 5px;
+}
+
+.menu .item span.open::before {
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu .item span.open::after {
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  background-color: lightblue;
+}
+
+.container .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  background-color: #ff1919;
+  width: 50%;
+  margin: auto;
+}
+
+.container .box:nth-child(odd) div {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.container .box div {
+  width: 100%;
+  background-color: mediumblue;
+  text-align: center;
+  padding: 1em;
+  text-align: justify;
+}
+
+.menu-items {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  top: 120px;
+  background-color: white;
+  border-top: 2px dashed gray;
+}
+
+.menu-items ul {
+  display: block;
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.menu-items ul li {
+  letter-spacing: 15px;
+  padding: 15px;
+  color: #1b0202;
+  font-size: 25px;
+  text-align: center;
+}
+
+.menu-items ul li::first-letter {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.open {
+  display: block;
+}
+
+.clock {
+  position: relative;
+  background: url("clock.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 1120px;
+  margin: auto;
+  height: 500px;
+}
+
+.clock:after {
+  content: "";
+  background-color: rgba(0, 68, 255, 0.452);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.container-2 {
+  height: 500px;
+  margin: auto;
+  width: 1120px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding: 20px;
+}
+
+.container-2 .box {
+  position: relative;
+  color: black;
+  -webkit-box-shadow: 0 4px 3px 2px rgba(66, 66, 66, 0.1), 0 -1px 2px 2px rgba(66, 66, 66, 0.1);
+          box-shadow: 0 4px 3px 2px rgba(66, 66, 66, 0.1), 0 -1px 2px 2px rgba(66, 66, 66, 0.1);
+  height: 200px;
+}
+
+.container-2 .box .title {
+  height: 35px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 320px;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: .2em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+}
+
+.container-2 .box .title::first-letter {
+  font-size: 25px;
+}
+
+.container-2 .box p {
+  display: table-cell;
+  width: 25%;
+  text-align: justify;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.container-2 .box p:not(:last-child) {
+  border-right: 1px solid rgba(128, 128, 128, 0.438);
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    background-color: brown;
+  }
+  .container .box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .container .box:nth-child(odd) div {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+/*# sourceMappingURL=grid.css.map */
