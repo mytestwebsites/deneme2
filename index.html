@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="item">
+            <span class="myclass"></span>
+        </div>
+        <div class="menu-items">
+            <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quae possimus labore tenetur, dicta
+                autem iure! Harum, temporibus. Commodi voluptate dicta, architecto, non pariatur maxime nemo ullam
+                est inventore sapiente adipisci labore facere reprehenderit debitis asperiores reiciendis voluptatem
+                aliquam quam neque magnam numquam. Iste, ullam et. Ea dolorum placeat eligendi.</div>
+        </div>
+        <div class="box">
+            <div><i class="fab fa-affiliatetheme"></i></div>
+        </div>
+        <div class="box">
+            <div>3</div>
+        </div>
+        <div class="box">
+            <div>4</div>
+        </div>
+        <div class="box">
+            <div>5</div>
+        </div>
+        <div class="box">
+            <div>6</div>
+        </div>
+        <div class="box">
+            <div>7</div>
+        </div>
+        <div class="box">
+            <div>8</div>
+        </div>
+    </div>
+
+    <div class="clock">
+
+    </div>
+
+    <div class="container-2">
+        <div class="box">
+           <div class="title">Deneme</div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sit.</p>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, minus.</p>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, minus.</p>
+        </div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>  
+    </div>
+
+    <script>
+        var item = document.querySelector(".item");
+        var menu = document.getElementsByClassName("myclass")[0];
+        var items = document.getElementsByClassName("menu-items")[0];
+        item.addEventListener('click', function (e) {
+            e.stopPropagation();
+            menu.classList.toggle("open");
+            items.classList.toggle("open");
+        })
+    </script>
+</body>
+
+</html>
